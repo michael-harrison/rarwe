@@ -33,3 +33,15 @@
 .band-link.active .pointer {
   display: block;
 }
+
+.new-band {
+  width: 82%;
+}
+
+.new-song {
+  width: 50%;
+}
+
+.new-song-button {
+  margin-left: 20px;
+}
