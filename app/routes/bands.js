@@ -1,5 +1,4 @@
 import Route from '@ember/routing/route';
-import EmberObject, {computed} from '@ember/object';
 import Band from 'rarwe/models/band';
 import Song from 'rarwe/models/song';
 
