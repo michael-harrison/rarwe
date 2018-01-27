@@ -13,10 +13,6 @@ export default Route.extend({
       let song = Song.create({title: title, band: band});
       band.get('songs').pushObject(song);
       controller.set('title', '');
-    },
-    updateRating: function (params) {
-      let song = params.item, rating = params.rating;
-      song.set('rating', rating);
     }
   }
 });
