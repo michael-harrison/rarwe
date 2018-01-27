@@ -39,6 +39,14 @@ export default Route.extend({
       let band = Band.create({name: name});
       this.modelFor('bands').pushObject(band);
       this.get('controller').set('name', '');
+    },
+    createSong: function () {
+      let controller = this.controllerFor('bands.band.songs');
+      let band = this.modelFor('bands.band');
+      let title = controller.get('title');
+      let song = Song.create({title: title, band: band});
+      band.get('songs').pushObject(song);
+      controller.set('title', '');
     }
   }
 });
