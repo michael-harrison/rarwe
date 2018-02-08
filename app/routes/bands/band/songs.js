@@ -9,7 +9,10 @@ export default Route.extend({
     controller.set('songCreationStarted', false);
   },
   actions: {
-    createSong: function () {
+    didTransition: function () {
+      let band = this.modelFor('bands.band');
+      document.title = `${band.get('name')} songs - Rock & Roll`;
+    }, createSong: function () {
       let controller = this.get('controller');
       let band = this.modelFor('bands.band');
       let title = controller.get('title');

@@ -41,6 +41,9 @@ export default Route.extend({
   },
 
   actions: {
+    didTransition: function() {
+      document.title = 'Bands - Rock & Roll';
+    },
     createBand: function () {
       let name = this.get('controller').get('name');
       let band = Band.create({name: name});
