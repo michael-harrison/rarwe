@@ -5,6 +5,9 @@ export default Route.extend({
   model: function () {
     return this.modelFor('bands.band');
   },
+  resetController: function (controller) {
+    controller.set('songCreationStarted', false);
+  },
   actions: {
     createSong: function () {
       let controller = this.get('controller');
